@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* DISPLAY INLINE BLOCK*/
+        /* #container{
+            background-color: cornflowerblue;
+            height: 20px;
+            width: 200px;
+        }
+        #main{
+            background-color:aquamarine;
+            height: 20px;
+            width: 200px;
+            inline block display allows main or other  div to next to it it takes space accordingly
+            display: inline-block;
+        } */
+
+        /* DISPLAY INLINE */
+        /* #container{
+            background-color: blueviolet;
+            width: 500px;
+            height: 100px;
+            display: inline;
+        }
+
+        #main{
+            background-color: cadetblue;
+            width: 500px;
+            height:100px;
+            display: inline-block;
+        } */
+
+        /* Q DIFF BETWEEN DISPLAY NONE AND VISIBILITY HIDDEN? */
+        /* DISPLAY NONE---HIDE DIV OR DISABLE DIV AND COVERS IT IN WHOLE SCREEM */
+        /* VISIBILITY HIDDEN----IT HIDE THE BLOCK ELEMENTS BUT KEEP SPACE AS IT IS */
+
+        #container{
+            background-color: blueviolet;
+            width: 500px;
+            height: 100px;
+            display: inline;
+        }
+
+        #main{
+            background-color: cadetblue;
+            width: 500px;
+            height: 100px;
+            /* display: none; */
+            /* it keep its height width as it is but remove content */
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- DISPLAY PROPERTIES -->
+     <!-- <div id="container"></div> -->
+
+     <!-- its(div) width is short not covr whole screen width but yet span tag doesnt appear after that div 
+      block as it is block level element-->
+      <!-- span is inline element it takes width acoording to its words or its text size and next span also 
+       appear next to it-->
+
+     <!-- <span>Lorem ipsum dolor sit amet.</span>
+     <spam>Hello Techno</spam> -->
+
+     <!--now new div comes in next line as it doent appear next to span as it is block element  -->
+     <!-- <div id="main"></div> -->
+
+     <!-- INLINE DISPLAY ALLOWS EVERY ELEMENTS TO BE IN A PARTICULAR LINE ACC TO SIZE OF FONT or WIDTH it takes all in one line-->
+
+     <!-- <div id="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, est.</div>
+     <div id="main">Lorem ipsum dolor sit amet.</div> -->
+
+     <!-- DISPLAY NONE-->
+      <div id="container">Lorem ipsum dolor sit amet.</div>
+      <!-- in main display none means it display nothing or removes div -->
+      <div id="main">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, corporis.</div>
+      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi delectus iusto maxime voluptates inventore accusantium voluptatum odio nobis hic quas.</div>
+</body>
+</html>

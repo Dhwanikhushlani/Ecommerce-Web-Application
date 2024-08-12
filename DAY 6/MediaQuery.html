@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height: 200px;
+            width: 200px;
+            background-color: cadetblue;
+        }
+        /* USED TO APPLY CSS ONLY UPTO GIVEN RANGE AND AFTER THAT IT CHANGES ITS CSS */
+        /* HERE AT MAX 600 PX BELOW CSS IS APPLIED THEN AFTER 600 IT CHNGES TO NEW CSS GIVEN ABOVE*/
+        /* THIS WIDTH ID CHANGES BY MOVING INSPECT SCREEN */
+        /* SAME IT IS USED FOR MIN WIDTH ALSO  */
+        @media (max-width : 600px){
+            #container{
+                background-color: aliceblue;
+                border: 1px solid black;
+                height: 300px;
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: cadetblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* TRANSFORM PROPERTY */
+        /* TRANSFORM HAS 4 VALUES== TRANSLTE, SKEW, ROTATE, SCALE */
+        /* 1. TRANSLATE--->IT REFERS AS SHIFTING OF SELECTED ID OR ELEMENT TO BE SHIFTED IN X AND Y DIRECTION BOTH */
+        /* IF WE WRITE TRANSFORMX IT SHIFTS IT PLACE FROM X DIRECTION AND TRANSFORMY IT IN Y DIRECTION */
+        #container{
+            height: 400px;
+            width: 400px;
+            border: 3px solid yellow;
+            border-radius: 50%; 
+            /* ANIMATION FOR CIRCLE ABOVE CIRCLE ROTATION */
+            animation: spinner 2s linear infinite;
+
+            /* background-color: cornflowerblue; */
+            /* transform: translate(100px, 100px); */
+
+            /* 2. SCALE --> USED TO INCREASE OR DECREASE THE SCALE OF DIV AS HERE IT DOUBLES THE SCALE AND INCREASES SIZE  */
+            /* transform: scale(2); */
+
+
+            /* SCALE IN SINGLE DIRECTION BY USING SCALEX AND SCALEY IN SCALEX IT CHANGES ITS WIDTH 
+            BUT IN SCALEY IT CHANGES ITS HEIGHT */
+            /* transform: scaleX(2); */
+
+            /* 3.ROTATE ----> ROTATES THE BOX WITH PARTICULAR ANGLE GIVEN IN PARENTHESIS AS UNIT==DEG */
+            /* transform: rotate(130deg); */
+
+            /* IN 90 DEG IT ROTATES THE TEXT WRIITEN IN DIV */
+            /* transform: rotate(90deg); */
+
+            /* ROTETEX IS USED TO ROTATE BLOCK AROUND X AXIS--> WHICH LEAD TO DECREASE IN SIZE AS ANGLE INCREASE
+             AND TEXT SHOW THE PERFECT ANGLE ROTATION */
+             /* transform: rotateX(140deg); */
+
+
+             /* SAME AS IN Y IT ROTATES ALONG Y DIRECTION */
+             /* transform: rotateY(140deg); */
+
+             /* 4.SKEW---->ROTATES ALONG AXIS  */
+             /* transform: skew(30deg); */
+
+             /* SKEWX-->ROTATES ALONG X AXIS OR MAKE ANGLE ALONG IT */
+             /* transform: skewX(30deg); */
+
+             /* SKEWY-->ROTATES ALONG X AXIS OR MAKE ANGLE ALONG IT */
+             /* transform: skewY(30deg); */
+
+             /* IF WE WANT TO HOVER IT IN SOME SECONDS AS SMOOTHLY USE TRANSITION PROPERTY AS TIME EASE-IN-OUT */
+             /* HOVER THE BLOCK OR DIV SMOOTHLY AS CHANGES STYLE ACCORDINGLY */
+             /* THIS TRANSITION PROPERTY DOENT WORKS IN HOVER BLOCK IT ALWAYS WORK IN MAIN BLOCK */
+             /* transition: 1s ease-in-out; */
+        }
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: aliceblue;
+            border-radius: 50%;
+            /* transition: 2s ease-in-out; */
+
+            /* GIVE ANIMATION HERE AT KEYFRAME PART IT IS ONLY WRITTEN BUT EXECUTED HERE */
+            /* HERE TIME IS 4 S AND ITERTAION IS 4 WE CAN DO THAT AS INFINITE TIMES ALSO AS */
+            /* animation: spinner 4s ease-in-out 4; */
+
+            /* animation: spinner 2s ease-in-out infinite; */
+
+            
+        }
+
+            /* HOVER THE BLOCK OR DIV FREQUENTLY AS CHANGES STYLE ACCORDINGLY */
+        /* #container:hover{ */
+            /* background-color: yellowgreen;
+            border-radius: 50%; */
+
+            /* WE CAN USE THIS ANIMATOINS WITH TRANFORM PROPERTY ALSO AS */
+            /* transform: rotate(190deg);
+            background-color: yellow;
+            border-radius: 50%;
+            border: 1px solid black; */
+        /* } */
+
+        /* THIS IS USED TO CREATE AN ANIMATION OF AMLL BOX IN BIG BOX BY HOVERING TRANFORMS AND CHANGES IITS TYLE */
+        /* #container:hover #box{
+            transform: translate(300px, 300px);
+        } */
+
+
+        /* TO GIVE ANIMATIONS USE KEYFRAMES AND NAME OF ANIMATION */
+        /* HERE ONLY IT IS WRITTEN BUT WILL  EXECUTE IN BOX ID NAMEED AS ANIMATION */
+        /* @keyframes spinner{
+            0%{
+                transform: translate(0,0);
+            }
+            25%{
+                transform: translate(300px,0);
+            }
+            50%{
+                transform: translate(300px,300px);
+            }
+            75%{
+                transform: translate(0,300px);
+            }
+        } */
+
+
+        /* WE CAN USE FROM AND TO ALSO INSTEAD OF TIMEFRAMES IN % */
+        @keyframes spinner{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- TRANSFORM -->  
+     <!-- <div id="container">BOX</div> -->
+      <div id="container">
+        <div id="box"></div>
+      </div>
+</body>
+</html>

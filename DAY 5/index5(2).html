@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* GRID PROPERTY */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* GRID WORKS IN BOTH DIRECTIONS THAT IS IN X AND Y DIRECTION OR IN ROWS AND COLUMNS */
+        .container{
+            height: 80vh;
+            display: grid;
+            gap: 10px;
+
+            /* DIVIDES WHOLE SCREEN IN DIFFRENT NUMBER OF COLMNS HERE IT IS DIVIDED INTO 3 COLUMNS */
+            /* grid-template-columns: 100px 100px 100px; */
+
+            /* DIVIDES WHOLE SCREEN INTO COLUMNS WITH SOME FRACTIONS */
+            /* grid-template-columns: 1fr 1fr 1fr ; */
+
+            /* grid-template-columns: 1fr 1fr 1fr;---->IT CAN BE WRITTEN AS GRID-TEMPLATE-COLUMN(NO. OF COLUMNS, SIZE) */
+            /* grid-template-columns: repeat(3, 1fr); */
+
+
+            /* TO MAKE RESPONSIVE USE GRID AS AUTOFILL HERE WIDTH IS DECIDDES A S200PX*/
+            grid-template-columns: repeat(auto-fill , 200px);
+
+            /* WORKS ALSO AS IN PIXEL AND FRACTION BOTH */
+            /* grid-template-columns: 100px 1fr 1fr; */
+
+            justify-content: center;
+
+            /* INITIALLY IT IS STRETCH AS DEFAULT SO IT LOOKS LIKE A STRETCHED BOX */
+            /* align-items:flex-start ; */
+
+            /* GRID TEMPELATE FOR ROWS */
+            /* NOT USED MUCH AS WHEN COLUMNS GRID IS CREATED ROWS AUTOOMATICALLY GIVE GRID TO ROWS */
+            /* HERE OVERFLOW CONDITION OCCUR AS LAST ONE(ROW) SHRINKS*/
+            /* grid-template-rows: 1fr 1fr; */
+
+            /* GRID-TEMPLATE-AREA */
+            /* USED TO CREATE MEADER SECTION SIDE BAR SECTION MAIN SECTION AND FOOTER SECTION */
+            /* HERE HDR SHOWS HEADER SBR REPRESENTS SIDE BAR MAIN REPRESENT MAIN SECTION AND FTR 
+            REPRESENTS FOOTER SECTION*/
+            /* HERE WE CAN USE A B C D ETC INSTEAD OF HDR SBDR MAIN AND FTR */
+            grid-template-areas: "hdr hdr hdr hdr"
+                                 "sbr main main main"
+                                 "sbr main main main"
+                                 "ftr ftr ftr ftr";
+        }
+        .box{
+            background-color: cornflowerblue;
+            border: 1px solid black;
+        }
+        #box1{
+            /* GRID-COLUMN-START AND END USED TO MERGE COLUMNS WHERE IT IS STARTED AND ENDED */
+            /* THIS ATRTING AND ENDING POINT CAN BE OBSERVED BY GRID OPTION IN INSPECT WINDOW 
+            HOVER ON DIV CONTAINER THERE IS ONE SMALL GRID ICON CLICK ON IT AND IT WILL SHOW ALL VALUES OF GRID */
+            /* grid-column-start: 1;
+            grid-column-end: 4; */
+
+            /* SHORTCUT TO WRITE GRID-COLUMN HERE SPAN DENOTES THE SECTION THAT HOW MUCH SECTION IT TOOK 
+            HERE 4 COLUMNS ARE TAKEN */
+            /* grid-column: 1 / span 4; */
+
+            /* grid-row-start: 1;
+            grid-row-end: 3; */
+
+            /* USE TO GIVE BOX INFORMATION ABOUT WHICH BOX IS CONSIDERED AS HEADEER AND OTHER SECTIONS */
+            grid-area: hdr;
+        }
+        #box2{
+            grid-area: sbr;
+        }
+        #box3{
+            /* GRID-ROW-START AND END USED TO MERGE ROWS WHERE IT IS STARTED AND ENDED
+            grid-row-start: 2;
+            grid-row-end: 4; */
+            grid-area: main;
+        }
+        #box4{
+            grid-area: ftr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1" >box1</div>
+        <div class="box" id="box2" >box2</div>
+        <div class="box" id="box3" >box3</div>
+        <div class="box" id="box4" >box4</div>
+
+        <!-- REST COMMENTED AS TO USE GRID-CLUMN-AREAS AS WE WANT TO WORK WITH ONLY 4 BOXES -->
+        <!-- <div class="box" id="box5" >box5</div>
+        <div class="box" id="box6" >box6</div>
+        <div class="box" id="box7" >box7</div>
+        <div class="box" id="box8" >box8</div>
+        <div class="box" id="box8" >box8</div> -->
+    </div>
+</body>
+</html>

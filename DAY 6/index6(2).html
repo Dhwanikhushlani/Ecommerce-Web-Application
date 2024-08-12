@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1. SELECTION */
+        /* USED TO COLOR SELECTED TEXT WHEN WE DO IT USINNG CURSOR IT COLORS BACKGROUND IT IS VALID FOR ALL  */
+        p::selection{
+            background-color: black;
+            color: cornflowerblue;
+        }
+
+        /* BUT IF WE WANT TO USE IT ON SOME PARTICULAR AREA WRITE IT IN FRONT AS P::selection */
+        /* p::selection{
+            background-color: black;
+            color: cornflowerblue;
+        } */
+
+        /* 2. FIRST LETTER */
+        /* #para::first-letter{
+            background-color: blueviolet;
+        } */
+
+        /* 3. FIRST LINE */
+        /* DOUBT : WE CAN DO FIRST LINE COLOR BY SPAN ALSO BUT 
+        HERE FIRST LINE IS NOT FIXED IT CAN VARY AS OUR BROWSER SCREEN VARIES 
+        BUT IT ALWAYS TAJES FIRST LINE WHICH EVEN CONTAIN ONLY ONE WORD THATS WHY PSEUDO ELEMENTS ARE USED */
+        /* #para::first-line{
+            background-color: blueviolet;
+        } */
+
+        /* 4. BEFORE */
+        /* MANDATORY TO GIVEN CONTENT AS BLANK OR PUT SOMETHING CCORDINGLY */
+        /* IT GIVES CONTENT BEFORE THE WRITTEN PARAGRAPH WITH STYLE WE HAVE GIVER */
+        /* #para::before{
+            content: "Hello Techno";
+            background-color: brown;
+            padding: 2px;
+        } */
+
+
+        /* WE CAN ALSO USE AS WHEN WE HOVER ON PARAGRAPH IT WILL SHOW EXTRA TEXT BEFORE THE CONTENT
+         OR ELSE SHOW IT NORMALLY ALSO */
+         /* #para:hover::before{
+            content: "Hello Techno";
+            background-color: brown;
+            padding: 2px;
+        } */
+        
+
+        /* SAME FOR AFTER AS BEFORE ONE */
+        #para::after{
+            content: "Hello Techno";
+            background-color: brown;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- PSEUDO ELEMENTS  -->
+     <!-- FIRST LETTER, FIRST LINE, BEFORE, AFTER, -->
+     <ul>
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+        <li>Item-5</li>
+        <li>Item-6</li>
+        <li>Item-7</li>
+        <li>Item-8</li>
+     </ul>
+     <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quia pariatur corporis eius perferendis facere odit blanditiis, quisquam ullam cum explicabo labore ratione neque quod eaque autem. Nemo voluptatem sit molestias qui, nam animi delectus quae dolor aperiam sunt nostrum voluptas recusandae aliquam et vel dolorem eligendi voluptatibus necessitatibus hic adipisci magnam. Excepturi aut temporibus quis harum officiis ipsum hic ipsam voluptatum corrupti optio distinctio ea numquam dolores ex soluta ad, enim quia aperiam laboriosam neque voluptates eaque. Numquam sint nihil fuga, quaerat corrupti repellat minima modi maiores aliquid deserunt, laboriosam possimus officiis accusamus, consequuntur hic incidunt aperiam architecto saepe eos nesciunt maxime asperiores accusantium. Sit atque error corporis velit ratione nihil placeat. Unde sed numquam veritatis esse ducimus consectetur tempora laborum nobis, architecto, quidem itaque aliquam autem cupiditate quas amet. Nesciunt officiis rerum, facilis, labore quasi a sint nihil sapiente, fugit excepturi mollitia obcaecati ex deleniti unde! Consequuntur quod adipisci molestias accusamus sit. Maiores accusantium odio culpa minus. Fugit libero quia suscipit nesciunt enim reiciendis tenetur explicabo incidunt voluptatibus sint nam, iusto amet exercitationem sed numquam. Voluptates dicta corporis qui tempora quasi libero quaerat odit beatae ipsam nesciunt repudiandae, modi deserunt facilis sit fuga consequatur id quos incidunt! Molestiae.</p>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 1. */
+        /* group selectors--->used to group two classes to implement css on both without repeating */
+        /* #container , #main{
+            color: blueviolet;
+            font-size: 30px;
+        } */
+
+        /* #main{
+            color: blueviolet;
+            font-size: 30px;
+        } */
+
+        
+        /* 2. */
+         /* Apply CSS only on Child Selectors */
+        /* CHILD Combinators */
+        /* #CLASS > CHILD(TAG) */
+        #container > p{
+            color: blueviolet;
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        /* 3. */
+        /* Attributes Selector */
+        /* Apply CSS only on Attributes Selected */
+        /* TAG [ATTRIBUTE] */
+
+        /* APPLY TO BOTH TARGETS */
+        /* a[target]{
+            font-size: 50px;
+        } */
+
+        /* APPLY ONLY TO SELECTED ATTRIBUTE WITH SPECIFICATION i.e BLANK */
+        a[target="_blank"]{
+            font-size: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Inheritance -->
+
+    <div id="container">
+        <p id="para1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut pariatur repudiandae minus, esse totam tempora! Ex fugiat dolorem odio possimus!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Debitis veniam blanditiis officia architecto cumque iusto est fugiat porro aliquid accusantium.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Nemo quam obcaecati distinctio corporis? Veritatis modi et, doloribus impedit iure nesciunt?</p>
+    </div>
+
+    <div id="main">
+        <p>Hello Techno</p>
+        <p>Hello Udaipur</p>
+        <p>Hello TR1</p>
+    </div>
+
+    <a href="" target="_blank">Google</a>
+    <a href="" target="_self">Instagram</a>
+</body>
+</html>

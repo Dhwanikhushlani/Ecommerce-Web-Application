@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* SELECTS THE FIRST ITEM OR CHILD */
+        /* ul li:first-child{
+            background-color: aquamarine;
+        } */
+
+        
+        /* SELECTS THE LAST CHILS OR ITEM */
+        /* ul li:last-child{
+            background-color: blueviolet;
+        } */
+
+
+        /* WORKS ON FORMULA OF = AN+B */
+        /* HERE AFTER NTH CHILD PARENTHESIS CONTAINS NUMBER OF LINE OR ITEM TO BE SELECTED */
+        /* ul li:nth :nth-child(3){
+            background-color: blue;
+        } */
+
+        /* HERE IT SELECTS ITEM AS USING (2N+1) I.E, 2*0+1=1... */
+        ul li:nth-child(2n+1){
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <!-- hover,visited,active,last child,nth child -->
+     <!-- PSEUDO CLASSES HAVE SINGLE COLON WHILE PSEUSO ELEMENTS HAVE DOUBLE COLON -->
+      <ul>
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+        <li>Item-5</li>
+        <li>Item-6</li>
+        <li>Item-7</li>
+        <li>Item-8</li>
+      </ul>
+      <br>
+      <ul>
+        <li>list-1</li>
+        <li>list-2</li>
+        <li>list-3</li>
+      </ul>
+</body>
+</html>

@@ -1,0 +1,310 @@
+/* Reset */
+.container{
+    gap: 0;
+    /* overflow: auto; */
+}
+.background{
+    background-image: url("https://img.freepik.com/premium-psd/smoke-with-glitter-particles-transparent-background_1022554-6124.jpg?w=900");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150vh;
+    width: 100%;
+    gap: 0;
+}
+.background h3{
+  text-decoration: solid;
+  color: white;
+  margin: 70px;
+  font-size: 90px;
+  padding: 100px;
+  font-family: sans-serif;
+}
+.background h4{
+    text-decoration: solid;
+  color: white;
+  margin: 70px;
+  font-size: 220px;
+  padding: 100px;
+  font-family: sans-serif;
+}
+.image{
+    height: 90vh;
+    width: 100%;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEWhoaFpDRRbAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC");
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap: 0;
+}
+.image h1{
+    text-decoration: solid;
+    color: white;
+    padding: 210px;
+    font-size: 50px;
+    text-align: left;
+    font-family: sans-serif;
+    margin-left: 10%;
+}
+.image h3{
+    text-decoration: solid;
+    color: black;
+    font-size: 35px;
+    text-align:left;
+    margin-left: 21%;
+    margin-top: -12%;
+    font-family: sans-serif;
+}
+.image h6{
+    text-decoration: solid;
+    color: white;
+    font-size: 20px;
+    text-align:justify;
+    margin-left: 50%;
+    margin-top: -11%;
+    font-family: sans-serif;
+    font-weight: -50px;
+    
+}
+.head h3{
+    text-decoration: solid;
+    text-align: center;
+    font-size: 35px;
+    font-family: sans-serif;
+    margin-top: 5%;
+}
+#para{
+    text-decoration: solid;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 150%;
+}
+#para2{
+    text-decoration: solid;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+.logo{
+    height: auto;
+    width: 150px;
+    margin-left: 4%;
+}
+#item{
+    font-size: 30px;
+    font-family: sans-serif;
+    margin-left: 7%;
+    /* font-weight: 50%; */
+}
+#text{
+    font-size: 20px;
+    margin-left: 7%;
+    line-height: 150%;
+}
+.logo2{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 293%;
+    margin-left: 38%;
+}
+.item2{
+    position: absolute;
+    top: 306.2%;
+    margin-left: 38%;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+#text2{
+    position: absolute;
+    top: 200%;
+    font-size: 20px;
+    /* margin-left: 1%; */
+    line-height: 150%;
+}
+.logo3{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: -300%;
+    margin-left: 40%;
+}
+.item3{
+    position: absolute;
+    top: -10%;
+    margin-left: 40%;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+#text3{
+    position: absolute;
+    top: 200%;
+    font-size: 20px;
+    /* margin-left: 3%; */
+    line-height: 150%;
+}
+.logo4{
+    margin-left: 5%;
+    height: auto;
+    width: 100px;
+
+}
+#item4{
+    font-size: 30px;
+    font-family: sans-serif;
+    margin-left: 6%;
+}
+#text4{
+    font-size: 20px;
+    margin-left: 6%;
+    line-height: 150%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 20px;
+}
+
+/* Programs Section */
+.programs {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.programs h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.programs p {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 140%;
+}
+
+.program-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.program-item {
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+    flex: 1 1 30%; 
+    margin: 15px;
+}
+
+/* .program-item img #image1 {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+} */
+.program-item2 {
+    width: 250px;
+    margin: 20px;
+    text-align: left;
+    flex: 1 1 30%; 
+    margin: 20px;
+}
+.program-item3 {
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+    flex: 1 1 30%; 
+    margin: 15px;
+}
+ #image1{
+    width: 150px;
+    height: 100px;
+    margin-bottom: 15px;
+    margin-left: -24%;
+ }
+ #image2{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 12px;
+    margin-left: 12%;
+ }
+ #image3{
+    width: 85px;
+    height: 85px;
+    margin-bottom: 15px;
+    margin-left: -60%;
+ }
+
+.program-item h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    font-family:  sans-serif;
+    margin-left: 12%;
+}
+
+.program-item p {
+    font-size: 20px;
+    color: rgb(101, 99, 99);
+    text-align: left;
+    margin-left: 30%;
+    line-height: 140%;
+}
+.program-item2 h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    font-family:  sans-serif;
+    margin-left: 12%;
+}
+
+.program-item2 p {
+    font-size: 20px;
+    color: rgb(101, 99, 99);
+    text-align: left;
+    margin-left: 12%;
+    line-height: 140%;
+}
+.program-item3 h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    font-family:  sans-serif;
+    margin-left: -8%;
+}
+
+.program-item3 p {
+    font-size: 20px;
+    color: rgb(101, 99, 99);
+    text-align: left;
+    margin-left: 10%;
+    line-height: 140%;
+}
+.new-program {
+    flex-basis: 100%; 
+    margin-left: -68%;
+}
+.new-program p{
+    font-size: 20px;
+    color: rgb(101, 99, 99);
+    margin-left: 44%;
+    text-align: left;
+    line-height: 140%;
+}
+.new-program h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    font-family:  sans-serif;
+    margin-left: 7.6%;
+}

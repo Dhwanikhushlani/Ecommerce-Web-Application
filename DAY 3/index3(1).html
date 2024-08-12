@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+    <!-- Priority is given to inline css first and then in internal and external there is no priority it is based 
+     on everlaping as which is below did overlap the other here internal oe overlap the extrenal one-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Khitan+Small+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sankofa+Display&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style1.css">
+    <style>
+        /* *{
+            padding: 100%;
+        } */
+        #text{
+            background-color: rgba(0, 0, 0, 0.709);
+            color: aqua;
+            /* FONT PROPERTIES */
+            /* font-size: 40px;
+            font-weight: 700;
+            font-family: sans-serif;
+            font-style: italic; */
+            font-family: "Sankofa Display", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            /* TEXT PROPERTIES */
+            text-decoration: underline;
+            text-transform: uppercase;
+            text-align: center;
+
+            line-height: 70px;
+            letter-spacing: 10px;
+            word-spacing: 40px;
+        }
+        .head{
+            font-family: "Sankofa Display", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+
+        }
+        #google{
+            /* give none decoration as it is link so no underline and changes color */
+            text-decoration: none;
+            color: brown;
+        }
+        #container{
+            width: 100px;
+            height: 100px;
+            background-color: cadetblue;
+            /* border properties --->all three are mandatory with by default color black*/
+            /* border-width: 10px;
+            border-style: solid;
+            border-color: black; */
+            border: 10px solid blue;
+            /* rounds the all corners */
+            border-radius: 20px;
+            /* if border-radius: 50% ==>forms circle */
+            box-shadow: 1px 3px 7px 1px grey;
+            text-shadow: 2px 2px 2px rgba(206,89,55,0);
+        }
+    </style>
+</head>
+<body>
+    <p id="text" class="head" style="background-color: brown;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, excepturi veritatis illo quod soluta autem, quis repellat nemo ipsam aliquid labore nulla delectus at sapiente error ratione nesciunt, quaerat laudantium? Ut voluptates similique porro, ipsam ea ducimus cum eum autem eligendi quos aliquid dolor harum eaque saepe magnam est a fuga sit. Quibusdam facere quasi, velit error atque blanditiis architecto nemo, dignissimos temporibus, aspernatur animi sequi. Iure, tempora, illum fugiat, ducimus exercitationem quas ipsam doloremque magnam consequuntur mollitia voluptatum? Fugit neque ad asperiores, quia nisi doloribus
+         delectus dolores velit in earum deleniti rerum ratione error ducimus ab provident aliquam iusto!</p>
+    <p id="main" class="head">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, explicabo?</p>
+    <a id="google" href="">Google</a>
+    <div id="container"></div>
+</body>
+</html>

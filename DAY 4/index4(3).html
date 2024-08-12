@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* #container{
+            width: 500px;
+            width: 50vw;
+            height: 500px;
+            background-color: steelblue;
+        } */
+         #container{
+            font-size: 20px;
+         }
+         #main{
+            font-size: 3rem;
+            /* margin: 3em; */
+            background-color: cornflowerblue;
+         }
+    </style>
+</head>
+<body>
+    <!-- UNITS -->
+     <!-- px, vh, vw(viewport width), %, em, rem -->
+
+      <!-- 1.
+       px  stands for pixel -->
+     <!-- 2.
+      vw...for width used as divide width according to whole screen(i.e 100vh) size it is not fixes it changes when we
+        changes inspect window or move it then width also changes its width according to viewport it si used to make page more responsie -->
+       <!--3.
+        vh same as vw but used for height rather than width -->
+        <!-- 4.
+         % works according to parent class as we wnt to give height and width to parent first then only childs 
+         attributes executed -->
+         <!-- 5.
+          em works according to parent class as t acccounts parents attributes as 1 em and acc to it 
+          it executes child attributes -->
+          <!-- 6.rem
+           rem works according to browser font size(i.e from settings it take it as 1rem) in which 
+           r stands for root that is root mens browser font size -->
+
+        <div id="container">
+            <div id="main">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, eum.
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* DISPLAY FLEX USES TO ALIGN ALL ELEMENSTS IN ONE SINGLE LINE
+         OR ROW OR IT WILL LSO IN ONE COLUMN BY USING FLEX DIRECTION BUT BY DEFAULT IT IS SET AS ROW*/
+
+        /* IT ALSO HAVE SUPPPORTING PROPERTIES */
+        
+
+        /* IT IS USE TO ALIGN ALL BOXES IN SAME ORDER AND IN GOOD AARRANGEMENTS */
+        *{
+            box-sizing: border-box;
+        }
+
+        /* PARENT CLASS PROPERTIES */
+        .container{
+            border: 3px solid red;
+            height: 70vh;
+            display: flex;
+            /* shows boxes in column direction  */
+            /* flex-direction: column; */
+
+            /* align-items: start; */
+
+            /* FLEX WRAP WHEN SCREEN OF BROWSER INSPECT IS MOVED IT SHIFTS 
+            BOXES DOWNWARDS AS DON NOT SHRIK BOXES BUT IN FLEX IT SHRINKES BOXES ACCORDINGLY */
+            /* BY DEFAULT IT IS NO WRAP */
+            flex-wrap: wrap;
+
+            /* IT CREATES GAP ONLY BETWEEN INNER BOXES*/
+            /* gap: 10px; */
+
+            /* COMBINATION OF BOTH FLEX DIRECTION AND WRAP INSTEAD OF WRITING BOTH USE FLEX-FLOW */
+            /* flex-flow: row wrap; */
+
+            /* ALIGN CONTENT WITH IT ACCORDINGLY AS CENTER END START ETC. */
+            /* JUSTIFY CONTENT WORKS ON CROSS AXIS */
+            /* BY DEFAULT WHEN FLEX DIRECTION IS ROW THEN MAIN AXIS IS IN X DIRECTION BUT WHEN FLEX DIRECTION IS CHANGED TO COLUMN X DIRECTION 
+            IS CONSIDERED AS CROSS AXIS */
+            justify-content: space-between;
+
+            /* ALIGN ITEMS WORKS ON CROSS AXIS */
+            /* IT TOOKS  OR CREATE BOX WIDTH ACCORDING TO CONTENT */
+            /* BY DEFAULT IT IS STRETCH */
+            align-items: center;
+
+            /* WRAP DIVIDES WHOLE DIV INTO EQUAL PARTS AND THEN ACCORDING TO ALIGN-ITEMS IT ALIGNS */
+            /* flex-wrap: wrap; */
+
+            /* ALIGN-CONTENT AIGNS AND MANAGES SPACE BETWEEN CONTENT OR ROWS OF DIV */
+            /* align-content: flex-start; */
+        }
+
+        /* CHILDREN CLASS PROPERTIES
+        1.ORDER --->IT APPLIES TO SPEECIFIC CHILDERN
+        BY DEFAULT ORDER IS 0
+        THE GREATER NUMBER OF ORDER IT WILL SHIFT IT TO END */
+        .box{
+            border: 3px solid green;
+            width: 100px;
+            /* margin: 10px;    NOT USED AS IT CREATES MARGIN FROM ALL SIDES FROM MAIN BOX ALSO  BUT CORRECT ONE IS GAP*/
+
+            /* FLEX BASIS IS USED TO DIVIDE ALL BOXES INTO 25% */
+            /* flex-basis: 25%; */
+        }
+        
+        #box1{
+            /* ORDER PROPERTY */
+            /* order: 4; */
+
+            /* FLEX GROW USED TO SPEED UP THE MOVEMENT OR DOUBLES THE SPEED OF GROW OF CHILDREN BOX SELECTED AS IT DOENT TAKE THE WIDTH THAT
+             IS APPLIED TO AL BUT NOT TO SELECTED CHILDREN WITH FLEX GROW */
+             /* flex-grow: 2; */
+
+             /* FLEX SHRINK ITS BY DEFAULT "1" AS IT INCREASES IN THIS BOX SHRINKS WITH DOUBLE SPEED */
+             /* flex-shrink: 2; */
+
+             /* DIRECT FLEX PROPERTIES */
+             /* FLEX : FLEX-GROW  FLEX-SHRNK  FLEX-BASIS */
+             /* flex: 0 1 200px; */
+
+             /* ALIGN-SELF---> WHEN ALIGN-ITEMS IS ACTIVE THEN ALIGN SELF IS USED TO ALIGN PARTICULAR
+              BOX IN WHICH IT IS USED I.E, */
+            align-self: flex-start;
+        }
+        /* #box2{
+            order: 3;
+        } */
+    </style>
+</head>
+<body>
+    <!-- (v imp)flex,grid,pseudo classes and elements,overflow -->
+    <!--SHORTCUT=  ".container>.box#box-${box-$}*8" -->
+
+    <div class="container">
+        <div class="box" id="box1" >box1</div>
+        <div class="box" id="box2" >box2</div>
+        <div class="box" id="box3" >box3</div>
+        <div class="box" id="box4" >box4</div>
+        <div class="box" id="box5" >box5</div>
+        <div class="box" id="box6" >box6</div>
+        <div class="box" id="box7" >box7</div>
+        <div class="box" id="box8" >box8</div>
+    </div>
+
+</body>
+</html>
