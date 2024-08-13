@@ -1,5 +1,5 @@
 /* Reset */
-.container{
+.contain{
     gap: 0;
     /* overflow: auto; */
 }
@@ -245,6 +245,19 @@ body {
     margin-bottom: 15px;
     margin-left: -60%;
  }
+ #image4{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px; 
+    margin-left: -7%;
+ }
+ #image5{
+    width: 85px;
+    height: 85px;
+    margin-left: 10%;
+    margin-top: -55px;
+    
+ }
 
 .program-item h3 {
     font-size: 25px;
@@ -264,7 +277,7 @@ body {
 .program-item2 h3 {
     font-size: 25px;
     font-weight: bold;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
     font-family:  sans-serif;
     margin-left: 12%;
 }
@@ -309,5 +322,99 @@ body {
     font-family:  sans-serif;
     margin-left: 7.6%;
 }
+.new-program2 {
+    flex-basis: 100%; 
+    text-align: left;
+    margin-left: 31%;
+}
+.new-program2 h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: .5%;
+    font-family:  sans-serif;
+    margin-left: 10.7%;
+    margin-top: -22.5%;
+}
 
+.new-program2 p {
+    font-size: 20px;
+    color: rgb(101, 99, 99);
+    text-align: left;
+    margin-left: 11%;
+    line-height: 140%;
+    margin-top: 17px;
+    margin-bottom: 10%;
+}
+.row{
+    gap: 5rem;
+    display: flex;
+    color: white;
+}
+.container {
+    /* display: flex; */
+    /* margin-top: 50px; */
+    padding: 100px;
+    background-color: #1e1e1e; /* Dark background similar to the screenshot */
+    color: #fff; /* White text color */
+    height: 100%;
+}
+
+.col-md-6 h2 {
+    /* z-index: 1; */
+    color: #fff;
+    font-size: 50px;
+    /* margin-top: -60%; */
+    /* margin-left: 200%; */
+    /* color: white; */
+    margin-top: 18%;
+}
+
+.col-md-6 p {
+    font-size: 20px;
+    line-height: 1.5;
+    /* margin-bottom: 20px; */
+    /* margin-left: 200%; */
+}
+.col-md-6{
+    height:200%;
+    width: 40%;
+}
+.btn-primary {
+    background-color: #8299a8; /* Similar to the button in the screenshot */
+    border-color: #5C707C;
+    color: #fff;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    /* object-fit: cover; */
+}
+.gallery{
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: 10rem;
+}
+#gal1{
+    font-size: 20px;
+    color: rgb(101, 99, 99);
+    text-align: center;
+    line-height: 150%;
+}
+#gal2{
+    font-size: 20px;
+    color: rgb(101, 99, 99);
+    text-align: center;
+    line-height: 150%;
+}
+#gal3{
+    font-size: 20px;
+    color: rgb(101, 99, 99);
+    text-align: center;
+    line-height: 150%;
+}
 
