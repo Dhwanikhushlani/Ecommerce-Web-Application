@@ -1,4 +1,56 @@
-/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the top bar */
+.top-bar {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+ 
+}
+
+/* Logo and other elements */
+.logo {
+    font-size: 29px;
+    font-weight: bold;
+    color: #333;
+ position: absolute;
+ left: 1rem;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+}
+
+.right-icons img {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    /* cursor: pointer; */
+}
+.nicepage{
+    height: 25%;
+    width: 20%;
+    margin-top: 19%;
+    margin-left: -230px;
+    margin-bottom: 5%;
+}
+#nice{
+    margin-top: -29%;
+    margin-left: -19%;
+    font-size: 35px;
+    margin-bottom: 3%;
+    font-family: sans-serif;
+}
+
+
 .contain{
     gap: 0;
     /* overflow: auto; */
@@ -18,6 +70,7 @@
   font-size: 90px;
   padding: 100px;
   font-family: sans-serif;
+  text-align: left;
 }
 .background h4{
     text-decoration: solid;
@@ -26,11 +79,12 @@
   font-size: 220px;
   padding: 100px;
   font-family: sans-serif;
+  text-align: left;
 }
 .image{
     height: 90vh;
     width: 100%;
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEWhoaFpDRRbAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC");
+    background-color: #7d9ca2; 
     background-repeat: no-repeat;
     background-size: cover;
     gap: 0;
@@ -61,7 +115,7 @@
     margin-left: 50%;
     margin-top: -11%;
     font-family: sans-serif;
-    font-weight: -50px;
+    font-weight: lighter;
     
 }
 .head h3{
@@ -393,7 +447,7 @@ body {
     height: auto;
     /* object-fit: cover; */
 }
-.gallery{
+/* .gallery{
     font-size: 25px;
     font-family: sans-serif;
     text-align: center;
@@ -416,5 +470,255 @@ body {
     color: rgb(101, 99, 99);
     text-align: center;
     line-height: 150%;
+} */
+
+
+/* Reset some default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    /* text-align: center; */
 }
+
+/* Container for the gallery */
+.gallery-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Title of the gallery */
+.gallery-title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Description under the title */
+.gallery-description {
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 30px;
+    line-height: 142%;
+    text-align: center;
+}
+
+/* Grid layout for the images */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+/* Individual gallery items (images) */
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+    
+
+/* Responsive design */
+/* @media (max-width: 600px) {
+    .gallery-title {
+        font-size: 20px;
+    }
+
+    .gallery-description {
+        font-size: 14px;
+    }
+} */
+
+.numbers{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfIo7SMeBPXWf0p0HIW_CLMVsp2sGZ13ONxlcpEHhi9s9yrURQ");
+    height: 55vh;
+    width: 100%;
+    /* color: white;
+    text-align: left;
+    font-size: 30px;
+    padding-left: 250px;
+    padding-top: 150px; */
+}
+#h2{
+    padding-left: 230px;
+    color: white;
+    font-size: 40px;
+    font-family: sans-serif;
+    padding-top: 160px;
+}
+#students{
+    padding-left: 210px;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding-top: 10px;
+}
+#H2{
+    padding-left: 600px;
+    color: white;
+    font-size: 40px;
+    font-family: sans-serif;
+    margin-top: -6.48%;
+}
+#teachers{
+    padding-left: 580px;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-top: 0.7%;
+}
+#num1{
+    padding-left: 950px;
+    color: white;
+    font-size: 40px;
+    font-family: sans-serif;
+    margin-top: -6.48%;
+}
+#winners{
+    padding-left: 925px;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-top: 0.7%;
+}
+#num2{
+    padding-left: 1280px;
+    color: white;
+    font-size: 40px;
+    font-family: sans-serif;
+    margin-top: -6.48%;
+}
+#awards{
+    padding-left: 1270px;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-top: 0.7%;
+}
+/* .boy{
+    background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSNJmPADdMKqbDV6-0GC9h4qAnYlQeF5FW6Tx7NpNFMetU8rRQK");
+    object-fit: cover;
+    height: 70vh;
+} */
+.boyimg{
+    height: 68vh;
+    width: 33%;
+    /* position: absolute; */
+    margin: -200% 0 16.59% 0;
+}
+.qimage{
+    height: 82vh;
+    width: 50%;
+    margin: -16.87% 0 0 0;
+    display: block;
+}
+.ques{
+    display: inline-block;
+    position: relative;
+}
+.text-overlay{
+    position: absolute;
+    top: -33%;
+    left: 5%;
+    right: 60%;
+    /* transform: translate(-350%, -250%); */
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: left;
+
+}
+.text-overlay p{
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: left;
+    right: 60%;
+    line-height: 150%;
+}
+.handles img{
+    height: 5vh;
+    margin-left:-2%;
+}
+.scene{
+    height: 100vh;
+    width: 211vh;
+   
+}
+.scenery{
+    display: grid;
+    position: relative;
+}
+.black{
+    background-color: rgb(13, 13, 13);
+    height: 51.1vh;
+    width: 142.7%;
+    margin-left: 42.85rem;
+    margin-top: -18rem;
+}
+#name-input{
+    border-color: white;
+    color: black;
+    font-size: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 50%;
+    padding: 10px;
+    margin-top: 1px;
+    border: none;
+    border-radius: 0px;
+    box-sizing: border-box;
+    background-color: rgb(13, 13, 13); 
+    color: grey; 
+}
+
+button {
+    display: block;
+    width: 13%;
+    padding: 15px;
+    border: none;
+    background-color: rgb(159, 188, 159); 
+    color: white;
+    font-size: 15px;
+    border-radius: 0px;
+    cursor: pointer;
+    margin-left: 10rem;
+    
+}
+
+button:hover {
+    background-color: #333; /* Darker shade for hover effect */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 35px;
+    text-align: center;
+    font-size: .8rem;
+}
+
+footer nav a {
+    color: rgb(182, 220, 244);;
+    margin: 0 3px;
+    text-decoration: underline;
+}
+
 
