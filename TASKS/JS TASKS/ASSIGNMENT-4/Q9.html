@@ -1,0 +1,30 @@
+<!-- create html element with some text that includes html tags. write two 
+ javascript functions :one that retrieves the innerHTML and one that retrieves 
+ the textContent of element , and display these values else where on page. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Retrieve innerHTML and textContent</h1>
+    <div id="myElement">
+        <p>This is a <strong>sample</strong> text with <a href="#">HTML tags</a>.</p>
+    </div>
+    <button onclick="displayInnerHTML()">Show innerHTML</button>
+    <button onclick="displayTextContent()">Show textContent</button>
+
+    <h2>innerHTML:</h2>
+    <div id="innerHTMLDisplay" style="border: 1px solid #000; padding: 10px;"></div>
+    
+    <h2>textContent:</h2>
+    <div id="textContentDisplay" style="border: 1px solid #000; padding: 10px;"></div>
+
+    <script src="./Q9.js"></script>
+</body>
+</html>

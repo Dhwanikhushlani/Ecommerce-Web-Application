@@ -1,0 +1,35 @@
+<!-- Use the Fetch API to get a list of users from a public API. For example, you can use the
+JSONPlaceholder API for this task.
+ The endpoint to fetch users is: https://jsonplaceholder.typicode.com/users.
+ - Once the data is fetched, display the user details (like name, email, and address) in a list on your
+webpage. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .user-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .user-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .user-item h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>List of Users</h1>
+    <ul id="user-list" class="user-list"></ul>
+
+    <script src="./Q1.js"></script>
+</body>
+</html>

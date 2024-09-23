@@ -1,0 +1,7 @@
+Q17. What is the purpose of the <doctype> declaration in an HTML document?
+
+Ans : The <!DOCTYPE> declaration in an HTML document serves the purpose of informing the web browser about the 
+      version of HTML being used. It ensures that the browser renders the webpage correctly by triggering standards
+      mode, which follows the official specifications for HTML, rather than quirks mode, which emulates older, less 
+      standard-compliant behavior. In HTML5, the <!DOCTYPE> declaration is simple (<!DOCTYPE html>) and does not 
+      reference a specific version of HTML, as it applies to the entire HTML5 specification.

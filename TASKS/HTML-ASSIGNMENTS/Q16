@@ -1,0 +1,15 @@
+Q16. What is the purpose of the <head> tag in an HTML document?
+
+Ans : <!-- The <head> tag in an HTML document serves the purpose of containing metadata and links to resources that are 
+not directly displayed on the webpage. It provides information about the document, such as:
+
+1. Document Title: The <title> tag inside <head> sets the title of the webpage that appears in the browser's
+                 title bar or tab.
+
+2. Metadata: The <meta> tags provide information such as character encoding, author of the document, and viewport
+          settings for responsive design.
+
+3. Stylesheets and Scripts: The <link> tag is used to include external CSS stylesheets, and the <script> tag can
+                             link external JavaScript files or embed JavaScript.
+
+4. SEO Information: Metadata like descriptions and keywords that help with search engine optimization (SEO). -->

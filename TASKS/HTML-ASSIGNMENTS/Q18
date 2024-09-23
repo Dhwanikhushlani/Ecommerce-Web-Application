@@ -1,0 +1,8 @@
+Q18. Which HTML element is used to define the structure of a table?
+
+Ans : The <table> element is used to define the structure of a table in HTML. It acts as a container for 
+      various child elements that define the rows and cells of the table:
+
+        1. <tr> (table row) defines a row in the table.
+        2. <td> (table data) defines a cell within a row.
+        3. <th> (table header) defines a header cell in the table.

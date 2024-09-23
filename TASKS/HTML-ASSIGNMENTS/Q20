@@ -1,0 +1,11 @@
+Q20. What is the purpose of the <footer> tag in an HTML document?
+
+Ans : The <footer> tag in an HTML document defines the footer section of a webpage or a section within the page.
+      It typically contains information related to the content above it and is often placed at the bottom of a 
+      webpage. The content inside a <footer> can include:
+
+    1. Contact Information: Company or personal contact details.
+    2. Copyright Information: Legal copyright notices or disclaimers.
+    3. Links: Navigation links, privacy policies, terms of service, or site maps.
+    4. Social Media Icons: Links to social media profiles or related content.
+    5. Credits: Author or developer credits, or any attribution required.

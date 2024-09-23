@@ -1,0 +1,10 @@
+Q19. What is the purpose of the alt attribute in the <img> tag?
+
+Ans : The alt attribute in the <img> tag serves as alternative text that describes the image. Its primary           
+      purposes are:
+
+      1.Accessibility: For users who rely on screen readers due to visual impairments, the alt text provides a description of the image, allowing them to understand the content.
+
+      2. Fallback Content: If the image fails to load due to a broken link or network issue, the alt text is displayed in place of the image.
+
+      3. SEO: Search engines use alt text to understand the content of images, which can improve a webpage's search ranking and visibility.
