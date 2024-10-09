@@ -3,6 +3,10 @@ const validator = require("validator");
 const bcrypt = require("bcrypt");
 
 const userSchema = mongoose.Schema({
+    googleId : {
+        type : String,
+        default : null
+    },
     name : {
         type : String,
         required : [true , "Name is required"],
@@ -14,7 +18,7 @@ const userSchema = mongoose.Schema({
                 // if(typeof value !== "string"){
                 //     return false;
                 // }
-                return validator.isAlpha(value , "en-US");
+                return validator.isAlpha(value ,"en-US",{ignore : ' '});
             },
             message : "Name should be in string"
         }
@@ -25,7 +29,7 @@ const userSchema = mongoose.Schema({
         unique : true,
         validate : {
             validator : function(value){
-                return validator.isEmail(value);
+                return validator.isEmail(value,{ignore : " "});
             },
             message : "Please Enter a valid email address"       //? RUNS ONLY WHEN ABOVE STATEMENT GETS FALSE 
                                                                 // ?THEN THIS EXECUTED
@@ -33,11 +37,15 @@ const userSchema = mongoose.Schema({
     },
     password : {
         type :  String,
-        required : [true , "Password is required"],
-        minlength : [8, "Password must be 8 character long"],
+        // required : [true , "Password is required"],
+        required : function(){
+            return !this.googleId
+        },
+        // minlength : [8, "Password must be 8 character long"],
         maxlength : [128 , "Password cannot exceed 128 characters"],
         validate :{
             validator : function(value){
+                if(this.googleId) return true            //? BREAK STATEMENT HERE
                 return validator.isStrongPassword(value,{      //todo-> PASSING MULTIPLE KEYS TO DEFINE 
                                                                //TODO-> CONDITION AS 1 LOWECASE OR CHARACTER ETC 
                                                                //TODO-> TO MAKE PASS STRONG AS FOLLWS
@@ -55,18 +63,34 @@ const userSchema = mongoose.Schema({
     },
     phoneNumber : {
         type : String,
-        required : [true , "Phone Number is required"],
+        // required : [true , "Phone Number is required"],
+        required : function(){
+            return !this.googleId
+        },
         validate : {
             validator : function(value){
+                if(this.googleId) return true
                 return validator.isMobilePhone(value, "en-IN")         //* GIVE STRINGS AS NUMBER SHOULD BE OF INDIA
             },
             message : "Please enter a valid Phone number"
         }
+    },
+    role : {
+        type : String,
+        required : [true, "Role is required"],
+        enum : ["User","Admin"],
+        default : "Admin",   
+    },
+    status :{
+        type :  Boolean,
+        required : [true,"Status is required"],
+        enum : [true, false],
+        default : true
     }
 });
 
 
-FIXME:
+// FIXME:
 //! MIDDLEWARE CREATED.
 // ? NAME = SAVE AND NEXT INDICATING GO TO NEXT STEP.
 
@@ -81,14 +105,14 @@ userSchema.pre("save",async function(next){
     // todo--> AS IF WHEN NOT MODIFIED IT IT AGAIN GET ENCRYPTED AND STORES IN HASH FORM AGAIN AS IT IS ALREADY 
     // TODO---> IN HASH FORM
 
-        if(!user.isModified("password")) return next();
-    const hashedPassword = await bcrypt.hash(user.password , 12);
-    user.password = hashedPassword;
-    console.log(user);
-    next();
-    }catch(error){
-        next(error);
-    }
+        if(!user.isModified("password") || this.googleId ) return next();
+        const hashedPassword = await bcrypt.hash(user.password , 12);
+        user.password = hashedPassword;
+        // console.log(user);
+        next();
+        }catch(error){
+            next(error);
+        }
 })
 
 

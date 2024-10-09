@@ -1,10 +1,11 @@
 const { Router } = require("express");
 const User = require("../model/user");
 const bcrypt = require("bcrypt");
+const  jwt = require("jsonwebtoken");
 
 exports.signup = async (req,res,next)=>{
     try{
-        const { name , email , password , phoneNumber} = req.body;
+        const { name , email , password , phoneNumber, role} = req.body;
         const existingUser = await User.findOne({email : email});
 
         if(existingUser){
@@ -40,19 +41,20 @@ exports.signup = async (req,res,next)=>{
         // todo --> USING BCRYPT LIBRARY TO ENCRYPT DATA.
         // const hashedPassword = await bcrypt.hash(password , 12);
 
-        let newUser = new User({
+        const newUser = new User({
             name : name,
             email : email,
             password : password,
             //? SAVE ENCRYPTED PASS IN DATABASE.
             // password : hashedPassword,
-            phoneNumber : phoneNumber
+            phoneNumber : phoneNumber,
+            role
         });
 
         // * HERE MIDDLEWARE IS CALLED BEFORE NEXT EXECUTION OR BEFORE SAVING OF DOCUMENT IN NEXT LINE.
 
         await newUser.save();
-        res.status(201).send({message : "User Created"});
+        res.status(201).send({message : "User Created",data : newUser});
 
     }catch(error){
         // console.log(error.name);
@@ -94,13 +96,49 @@ exports.login = async (req,res,next)=>{
         if(!isMatched){
             const error = new Error("Unauthorized");
             error.name = "Unauthorized";
+            error.statusCode = 401;
             throw next(error);
             // return res.status(401).send({message : "Invalid Password"});
         }
 
-        res.status(200).send({message : "User Logged-In" , data : isExistingUser});
+    //     const token = jwt.sign({id : isExistingUser._id,email: isExistingUser.email,
+    //         role:isExistingUser.role},"your_jwt_secret" , {expiresIn : "1h"})
+    //     res.status(200).send({message : "User Logged-In" , data : isExistingUser, token : token});
+    // }catch(error){
+    //     // res.status(500).send(error);
+    //     next(error);
+
+    const token = jwt.sign({id : isExistingUser._id,email: isExistingUser.email,
+        role:isExistingUser.role}, process.env.JWT_SECRET , {expiresIn : "1h"})
+    res.status(200).send({message : "User Logged-In" , data : isExistingUser, token : token});
     }catch(error){
-        // res.status(500).send(error);
+    // res.status(500).send(error);
+    next(error);
+    }
+}
+
+exports.getAllUsers = async (req,res,next)=>{
+    try{
+        const users = await User.find({role : "User"});
+            res.status(200).send({message : "User Fetched" , data : users});
+    }catch(error){
+        next(error);
+    }
+}
+
+exports.updateUser = async (req, res, next)=>{
+    try{
+        const id = req.params.id;
+        const isExisting = await User.findById(id);
+        if(!isExisting){
+            const error = new Error("User not found");
+            error.name = "NotFound";
+            error.statusCode = 404;
+            throw error;
+        }
+        const updatedUser = await User.findByIdAndupdate(id,req.body())
+        res.status(202).send({message :  "User updated" , data : updatedUser});
+    } catch (error) {
         next(error);
     }
 }
